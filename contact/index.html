@@ -100,78 +100,24 @@
   <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
     <div class="row">
       <div class="col-12">
-        <form method="post" id="my-form" action="/">
-          <input type="hidden" name="_cc" value="angus@itsolver.net" />
-          <input type="hidden" name="_to" value="" />
           <h2>Enquiry</h2>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input id="name" type="text" class="form-control" placeholder="Your Name *" name="name" />
-              </div>
-              <div class="form-group">
-                <input id="email_address" type="text" class="form-control" name="email" placeholder="Your Email *" />
-              </div>
-              <div class="form-group">
-                <input id="phone" type="text" class="form-control" name="phone" placeholder="Your Phone Number *" />
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" name="_gotcha" style="display: none;" />
-              <input type="submit" value="Send Message" />
-              </div>
-            </div>
-          </div>
-        </form>
+        <div class="contact-box">
+	    <form action="/contact-success/" method="post" class="contact-form" id="contact-form">
+		<input type="hidden" name="_to" value="zeenet@cloudtaxservices.com.au" />
+		<input type="hidden" name="_cc" value="angus@itsolver.net" />
+		<input type="text" name="_gotcha" style="display: none;" />
+		<label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+		<label for="email">Email Address</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+		<a class="button g-recaptcha" data-sitekey="6Lf9DLYUAAAAABjZClce3qH-AfXSO0C0INaTmns-" data-callback='onSubmit'>Send</a></form>
+        </div>
       </div>
     </div>
-    <script>
-        // Helper function to get form data in the supported format
-function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
-      data = [];
 
-  for (var keyValue of formData) {
-    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-  }
-
-  return data.join("&");
-}
-
-// Fetch the form element
-var formEl = document.getElementById("my-form");
-
-// Override the submit event
-formEl.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  if (grecaptcha) {
-    var recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-      return false;
-    }
-  }
-
-  var request = new XMLHttpRequest();
-
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
-      // It worked
-    }
-  });
-
-  request.open(formEl.method, formEl.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formEl));
-});
-    </script>
     <div class="row">
       <div class="col-md-6">
         <div class="contact-details in-person">
