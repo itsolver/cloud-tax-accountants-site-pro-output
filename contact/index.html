@@ -102,19 +102,21 @@
       <div class="col-12">
           <h2>Enquiry</h2>
 
-        <div class="contact-box">
-	    <form action="/contact-success/" method="post" class="contact-form" id="contact-form">
-		<input type="hidden" name="_to" value="zeenet@cloudtaxservices.com.au" />
-		<input type="hidden" name="_cc" value="angus@itsolver.net" />
-		<input type="text" name="_gotcha" style="display: none;" />
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+        <label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." autofocus />
+
 		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+		<input type="email" name="email" id="email" placeholder="Enter your email..." required inputmode="email" />
+
 		<label for="message">Message</label>
 		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
-		<a class="button g-recaptcha" data-sitekey="6Lc5ldYUAAAAANJ7-HR0x4sbyIuRjB-tz3uvLxUa" data-callback='onSubmit'>Send</a></form>
-        </div>
+
+		<input type="hidden" name="_to" value="" />
+		<input type="text" name="_gotcha" style="display: none;" />
+
+		<input type="submit" value="Send Message" />
+	
+
       </div>
     </div>
 
