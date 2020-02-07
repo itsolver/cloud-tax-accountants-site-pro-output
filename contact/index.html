@@ -102,6 +102,21 @@
       <div class="col-12">
         <form name="contact" method="POST" action="success" data-netlify="true">
           <h2>Enquiry</h2>
+          <form method="post" id="my-form" action="/contact-success">
+              <label for="name">Your Name</label>
+              <input id="name" type="text" name="name" />
+              <label for="email_address">Your Email</label>
+              <input id="email_address" type="text" name="email" />
+               <label for="phone">Your Phone Number</label>
+              <input id="phone" type="text" name="phone" />
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+            
+              <input type="hidden" name="_to" value="" />
+              <input type="text" name="_gotcha" style="display: none;" />
+            
+              <input type="submit" value="Send Message" />
+            </form>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
