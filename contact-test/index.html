@@ -116,7 +116,7 @@
         </form>
       </div>
 </div>
-<script src="https://www.google.com/recaptcha/api.js?render=SITE_ID"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN"></script>
 <script>
     var submitted = false;
     var tokenCreated = false;
@@ -137,7 +137,7 @@
                 grecaptcha.ready(function() {
                     // do request for recaptcha token
                     // response is promise with passed token
-                    grecaptcha.execute('SITE_ID', {action: 'create_comment'}).then(function (token) {
+                    grecaptcha.execute('6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN', {action: 'create_comment'}).then(function (token) {
                         // add token to form
                         var input = document.createElement("input");
                         input.type = "hidden";
