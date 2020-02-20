@@ -102,19 +102,58 @@
 <div class="row">
       <div class="col-12">
           <h2>Enquiry</h2>
-          <form method="post" action="/contact-success">
-  <label>Email Address</label>
-  <input type="text" name="email" />
-
-  <label>Name</label>
-  <input type="text" name="name" />
-
-  <input type="hidden" name="_to" value="angus@itsolver.net" />
-  <input type="submit" value="Send Message" />
-</form>
+          <form method="post" id="my-form" action="/contact-success">
+          <label>Email Address</label>
+          <input type="text" name="email" />
+        
+          <label>Name</label>
+          <input type="text" name="name" />
+        
+          <input type="hidden" name="_to" value="angus@itsolver.net" />
+            <input type="text" name="_gotcha" style="display: none;" />
+        
+          <input type="submit" value="Send Message" />
+        </form>
       </div>
-    </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?render=SITE_ID"></script>
+<script>
+    var submitted = false;
+    var tokenCreated = false;
+    var formEl = document.getElementById('my-form');
 
+    formEl.addEventListener("submit", function (event) {
+
+        // Check if the recaptcha exists
+        if (!tokenCreated) {
+
+            // Prevent submission
+            event.preventDefault();
+
+            // Prevent more than one submission
+            if (!submitted) {
+                submitted = true;
+                // needs for recaptacha ready
+                grecaptcha.ready(function() {
+                    // do request for recaptcha token
+                    // response is promise with passed token
+                    grecaptcha.execute('SITE_ID', {action: 'create_comment'}).then(function (token) {
+                        // add token to form
+                        var input = document.createElement("input");
+                        input.type = "hidden";
+                        input.name = "g-recaptcha-response";
+                        input.value = token;
+                        formEl.appendChild(input);
+
+                        // resubmit the form
+                        tokenCreated = true;
+                        formEl.submit();
+                    });;
+                });
+            }
+        }
+  });
+</script>
     <div class="row">
       <div class="col-md-6">
         <div class="contact-details in-person">
