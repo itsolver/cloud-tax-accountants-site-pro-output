@@ -5967,7 +5967,7 @@ button[type='submit'] { border: none; vertical-align: center; }
 
 .svg-secondary { fill: #6d1cd3; }
 
-.intro { display: flex; justify-content: flex-start; align-items: center; padding-top: 140px; padding-bottom: 100px; }
+.intro { display: flex; justify-content: flex-start; align-items: center; padding-top: 120px; padding-bottom: 50px; }
 .intro h1 { font-size: 2.4rem; line-height: 1.2; font-family: "Palanquin Dark", Arial, sans-serif, -apple-system; width: 70%; font-weight: 500; }
 @media (min-width: 576px) { .intro h1 { width: 70%; } }
 @media (min-width: 768px) { .intro h1 { font-size: 3rem; width: 70%; } }
