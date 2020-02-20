@@ -6270,3 +6270,5 @@ body { font-size: 1.1rem; }
 
 svg { display: block; }
 svg polygon { display: inline-block; }
+
+.spacer { margin-top: 30px; }
