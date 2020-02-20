@@ -101,19 +101,34 @@
   <div class="container pt-4 pt-md-10 pb-4 pb-md-10">
 <div class="row">
       <div class="col-12">
+          <form name="contact" id="my-form" method="POST" action="/contact-success">
           <h2>Enquiry</h2>
-          <form method="post" id="my-form" action="/contact-success">
-          <label>Email Address</label>
-          <input type="text" name="email" />
-        
-          <label>Name</label>
-          <input type="text" name="name" />
-          <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
-          <input type="hidden" name="_to" value="angus@itsolver.net" />
-            <input type="text" name="_gotcha" style="display: none;" />
-        
-          <input type="submit" value="Send Message" />
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+               <!-- <input type="submit" name="submit" class="button button-primary" value="Send Enquiry" /> -->
+               <input type="hidden" name="_to" value="angus@itsolver.net" />
+               <input type="text" name="_gotcha" style="display: none;" />
+               <input type="submit" value="Send Message" />
+              </div>
+            </div>
+          </div>
         </form>
       </div>
 </div>
