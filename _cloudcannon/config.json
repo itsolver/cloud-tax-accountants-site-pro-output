@@ -1,0 +1,29 @@
+{
+	"time": "2020-09-28T01:18:15+00:00",
+	"cloudcannon": {
+		"name": "cloudcannon-jekyll",
+		"version": "1.4.1"
+	},
+	
+	"include": [".htaccess"],
+	"exclude": ["README.md"],
+	"base-url": "",
+	"collections": {"posts": {"output": true,"permalink": "/blog/:path/"},"services": {"output": true,"permalink": "/:collection/:path/"},"team": {"output": true,"permalink": "/:collection/:path/"}},
+	
+	
+	"defaults": [{"scope": {"type": "services"},"values": {"layout": "service"}},{"scope": {"type": "posts"},"values": {"layout": "post"}},{"scope": {"path": "images"},"values": {"image": true}},{"scope": {"path": "pages"},"values": {"permalink": "/:basename/"}}],
+	
+	
+	
+	"paths": {
+		"uploads": null,
+		"plugins": "_plugins",
+		"data": "_data",
+		"collections": "collections",
+		"includes": "_includes",
+		"layouts": "_layouts"
+	},
+	
+	"select-data": {"sass": {"sass_dir": "_sass","style": "compact"},"params": {"google_analytics_id": "","global": {"header_fixed": true},"footer": {"show_menu_footer_primary": true,"show_menu_footer_secondary": true,"show_services_links": true,"show_work_links": true},"homepage": {"show_services_section": true,"services_count": 6,"show_splash_section_one": true,"splash_one_image": "assets/images/undraw_post_online_dkuk.svg","splash_one_heading": "We Help Grow Business","splash_one_paragraph": "We work with you to develop your businesses potential to ensure a healthy future by regularly checking on your businesses performance and providing timely advice.","splash_one_link_url": "contact","splash_one_link_text": "Contact Us","show_partners": true,"show_work_section": false,"work_section_heading": "Our Work","work_count": 2,"show_view_all_work_button": true},"services": {"show_features": true,"show_splash_one_section": true,"splash_one_background_image": "assets/images/kaleidico-754543-unsplash.jpg","splash_one_heading": "Our goal is to help you reach your goals.","splash_one_paragraph": "Accounting and Taxation services in Victoria Point. Reliable. Proactive. Experienced."},"contact_cta": {"heading": "Ready to get started?","subheading": "Get in touch and get a quote.","button_url": "contact","button_text": "Contact us"}},"env": {"RBENV_VERSION": "2.5.5","HOSTNAME": "4b764a4e3fd5","LC_ALL": "en_US.UTF-8","RBENV_ROOT": "/usr/local/.rbenv","RBENV_HOOK_PATH": "/usr/local/.rbenv/rbenv.d:/usr/local/etc/rbenv.d:/etc/rbenv.d:/usr/lib/rbenv/hooks","JEKYLL_ENV": "production","PATH": "/usr/local/__bundle/ruby/2.5.0/bin:/usr/local/.rbenv/versions/2.5.5/bin:/usr/local/.rbenv/libexec:/usr/local/.rbenv/plugins/ruby-build/bin:/usr/local/.rbenv/shims:/usr/local/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LC_MESSAGES": "en_US.UTF-8","PWD": "/usr/local/__site/src","LANG": "en_US.UTF-8","TZ": "UTC","RBENV_SHELL": "bash","SHLVL": "2","HOME": "/home/cloudcannon","LANGUAGE": "en_US.UTF-8","RBENV_DIR": "/usr/local/__site/src","MENTOS_TIMEOUT": "20","LC_CTYPE": "en_US.UTF-8","RUBYOPT": "-rbundler/setup -W0 -E utf-8","RUBYLIB": "/usr/local/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/bundler-1.17.3/lib:/usr/local/.rbenv/rbenv.d/exec/gem-rehash","CONFIGURE_OPTS": "--disable-install-doc","BUNDLER_ORIG_BUNDLE_BIN_PATH": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_BUNDLE_GEMFILE": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_BUNDLER_ORIG_MANPATH": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_BUNDLER_VERSION": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_GEM_HOME": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_GEM_PATH": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_MANPATH": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_PATH": "/usr/local/.rbenv/versions/2.5.5/bin:/usr/local/.rbenv/libexec:/usr/local/.rbenv/plugins/ruby-build/bin:/usr/local/.rbenv/shims:/usr/local/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","BUNDLER_ORIG_RB_USER_INSTALL": "BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL","BUNDLER_ORIG_RUBYLIB": "/usr/local/.rbenv/rbenv.d/exec/gem-rehash:","BUNDLER_ORIG_RUBYOPT": "-W0 -E utf-8","BUNDLE_BIN_PATH": "/usr/local/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/bundler-1.17.3/exe/bundle","BUNDLE_GEMFILE": "/usr/local/__site/src/Gemfile","BUNDLER_VERSION": "1.17.3","GEM_PATH": "","GEM_HOME": "/usr/local/__bundle/ruby/2.5.0","MANPATH": "/usr/local/__bundle/ruby/2.5.0/gems/kramdown-1.17.0/man","JEKYLL_NO_BUNDLER_REQUIRE": "true"}},
+	"source": ""
+}
