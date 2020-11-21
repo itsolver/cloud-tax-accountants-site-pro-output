@@ -6178,9 +6178,9 @@ img.industries { padding: 0 15px 30px; width: 100%; margin: 0 auto; display: blo
 @media (min-width: 992px) { .team-summary .team-image.director { width: 240px; height: 360px; } }
 .team-summary .team-image.director img { width: 200px; height: 300px; border-radius: 50%; display: inline-block; }
 @media (min-width: 768px) { .team-summary .team-image.director img { width: 240px; height: 360px; } }
-.team-summary .team-image { margin-right: 20px; text-align: center; width: 100%; }
-@media (min-width: 768px) { .team-summary .team-image { text-align: left; } }
-@media (min-width: 992px) { .team-summary .team-image { width: 120px; } }
+.team-summary .team-image { text-align: center; width: 100%; }
+@media (min-width: 768px) { .team-summary .team-image { text-align: left; margin-right: 20px; } }
+@media (min-width: 992px) { .team-summary .team-image { width: 120px; margin-right: 20px; } }
 .team-summary .team-image img { width: 180px; height: 180px; border-radius: 50%; display: inline-block; }
 @media (min-width: 768px) { .team-summary .team-image img { width: 120px; height: 120px; } }
 @media (min-width: 768px) { .team-summary .team-block { flex: 1; } }
