@@ -135,50 +135,14 @@
                <input type="hidden" name="_to" value="zeenet@cloudtaxaccountants.com.au" />
                <input type="text" name="_gotcha" style="display: none;" />
                <input type="submit" name="enquiry" class="button button-primary" value="Send Enquiry" />
+               <div class="h-captcha" data-sitekey="c3773760-f034-4d5c-a4f5-ae47891f413e"></div>
               </div>
             </div>
           </div>
         </form>
       </div>
 </div>
-<script src="https://www.google.com/recaptcha/api.js?render=6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN"></script>
-<script>
-    var submitted = false;
-    var tokenCreated = false;
-    var formEl = document.getElementById('my-form');
-
-    formEl.addEventListener("submit", function (event) {
-
-        // Check if the recaptcha exists
-        if (!tokenCreated) {
-
-            // Prevent submission
-            event.preventDefault();
-
-            // Prevent more than one submission
-            if (!submitted) {
-                submitted = true;
-                // needs for recaptacha ready
-                grecaptcha.ready(function() {
-                    // do request for recaptcha token
-                    // response is promise with passed token
-                    grecaptcha.execute('6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN', {action: 'create_comment'}).then(function (token) {
-                        // add token to form
-                        var input = document.createElement("input");
-                        input.type = "hidden";
-                        input.name = "g-recaptcha-response";
-                        input.value = token;
-                        formEl.appendChild(input);
-
-                        // resubmit the form
-                        tokenCreated = true;
-                        formEl.submit();
-                    });;
-                });
-            }
-        }
-  });
-</script>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <div class="row pt-3">
       <div class="col-md-6">
         <div class="contact-details in-person">
