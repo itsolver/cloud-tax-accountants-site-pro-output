@@ -5927,7 +5927,7 @@ button[type='submit'] { border: none; vertical-align: center; }
 
 .strip-grey, .strip-bg-grey { background-color: #f4f5fb; }
 
-.strip-diagonal-right { margin-top: -100px; transform: skewY(-5deg); padding-bottom: 100px; }
+.strip-diagonal-right { margin-top: -100px; transform: skewY(-5deg); }
 .strip-diagonal-right > div { transform: skewY(5deg); }
 
 .strip-diagonal-left { margin-top: -100px; transform: skewY(5deg); padding-bottom: 100px; }
