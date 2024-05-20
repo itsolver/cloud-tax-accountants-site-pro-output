@@ -121,7 +121,45 @@
 </div>
   </div>
   <div id="wrapper" class="wrapper" data-cms-content-wrapper="/_layouts/default.html">
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN"></script>
+<script>
+  var submitted = false;
+  var tokenCreated = false;
+  var formEl = document.getElementById('my-form');
+
+  formEl.addEventListener("submit", function (event) {
+
+    // Check if the recaptcha exists
+    if (!tokenCreated) {
+
+      // Prevent submission
+      event.preventDefault();
+
+      // Prevent more than one submission
+      if (!submitted) {
+        submitted = true;
+        // needs for recaptacha ready
+        grecaptcha.ready(function() {
+          // do request for recaptcha token
+          // response is promise with passed token
+          grecaptcha.execute('6LcBqdoUAAAAAJYH4IEP1u7U4aKXIuLLNe70bcjN', {action: 'create_comment'}).then(function (token) {
+            // add token to form
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "g-recaptcha-response";
+            input.value = token;
+            formEl.appendChild(input);
+
+            // resubmit the form
+            tokenCreated = true;
+            formEl.submit();
+          });
+        });
+      }
+    }
+  });
+</script>
+
 <div class="intro pb-5">
   <div class="container">
     <div class="row">
@@ -146,7 +184,7 @@
                 <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
               </div>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
+                <input type="email" name="_replyto" class="form-control" placeholder="Your Email *" value="" />
               </div>
               <div class="form-group">
                 <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
@@ -159,7 +197,6 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <div class="h-captcha" data-sitekey="c3773760-f034-4d5c-a4f5-ae47891f413e"></div>
               </div>
             </div>
             <div class="col-md-6">
