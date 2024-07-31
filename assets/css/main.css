@@ -15973,7 +15973,7 @@ button[type=submit] {
 @media (min-width: 992px) {
   .intro h1 {
     font-size: 3rem;
-    width: 50%;
+    width: 70%;
   }
 }
 .intro p {
@@ -15994,7 +15994,7 @@ button[type=submit] {
 }
 @media (min-width: 992px) {
   .intro p {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -17004,6 +17004,18 @@ img.industries {
 .page-posts-list .posts-sidebar ul li {
   text-transform: capitalize;
 }
+.page-posts-list .post-summary .post-meta .post-author .post-author-avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.page-posts-list .post-summary .post-meta .post-author .post-author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 
 .page-posts-single .posts-sidebar {
   border: 1px solid #dcdcdc;
@@ -17028,11 +17040,16 @@ img.industries {
 }
 .page-posts-single .post-author .post-author-avatar {
   margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .page-posts-single .post-author .post-author-avatar img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .page-posts-single .post-author .post-author-info .post-author-name {
   display: block;
