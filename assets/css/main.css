@@ -17167,4 +17167,11 @@ ul.terms {
   padding: 30px 0;
 }
 
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
