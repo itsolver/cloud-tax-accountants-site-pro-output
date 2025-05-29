@@ -17025,7 +17025,7 @@ img.industries {
   width: 40px;
   height: 40px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 3px;
 }
 .page-posts-list .post-summary .post-meta .post-author .post-author-avatar img {
   width: 100%;
@@ -17060,7 +17060,7 @@ img.industries {
   width: 60px;
   height: 60px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 3px;
 }
 .page-posts-single .post-author .post-author-avatar img {
   width: 100%;
@@ -17143,7 +17143,7 @@ img.industries {
 .post-summary .post-author .post-author-avatar img {
   height: 26px;
   width: 26px;
-  border-radius: 50%;
+  border-radius: 3px;
 }
 .post-summary .post-author .post-author-info a.post-author-name {
   font-size: 1rem;
