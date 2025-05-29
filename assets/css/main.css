@@ -16859,6 +16859,8 @@ img.industries {
   height: 360px;
   border-radius: 50%;
   display: inline-block;
+  object-fit: cover;
+  object-position: center top;
 }
 @media (min-width: 768px) {
   .team-summary .team-image.director img {
@@ -16883,10 +16885,12 @@ img.industries {
   }
 }
 .team-summary .team-image img {
-  width: 240px;
-  height: 360px;
+  width: 200px;
+  height: 300px;
   border-radius: 50%;
   display: inline-block;
+  object-fit: cover;
+  object-position: center top;
 }
 @media (min-width: 768px) {
   .team-summary .team-image img {
