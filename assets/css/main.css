@@ -15956,24 +15956,16 @@ button[type=submit] {
   font-size: 2.4rem;
   line-height: 1.2;
   font-family: "Palanquin Dark", Arial, sans-serif, -apple-system;
-  width: 70%;
   font-weight: 500;
-}
-@media (min-width: 576px) {
-  .intro h1 {
-    width: 70%;
-  }
 }
 @media (min-width: 768px) {
   .intro h1 {
     font-size: 3rem;
-    width: 70%;
   }
 }
 @media (min-width: 992px) {
   .intro h1 {
     font-size: 3rem;
-    width: 70%;
   }
 }
 .intro p {
@@ -16851,12 +16843,12 @@ img.industries {
 @media (min-width: 992px) {
   .team-summary .team-image.director {
     width: 240px;
-    height: 307px;
+    height: 306px;
   }
 }
 .team-summary .team-image.director img {
   width: 240px;
-  height: 307px;
+  height: 306px;
   border-radius: 3px;
   display: inline-block;
   object-fit: cover;
@@ -16865,7 +16857,20 @@ img.industries {
 @media (min-width: 768px) {
   .team-summary .team-image.director img {
     width: 240px;
-    height: 307px;
+    height: 306px;
+  }
+}
+@media (min-width: 992px) {
+  .team-summary .team-image.director.old-ratio {
+    height: 360px;
+  }
+}
+.team-summary .team-image.director.old-ratio img {
+  height: 360px;
+}
+@media (min-width: 768px) {
+  .team-summary .team-image.director.old-ratio img {
+    height: 360px;
   }
 }
 .team-summary .team-image {
@@ -16896,6 +16901,14 @@ img.industries {
   .team-summary .team-image img {
     width: 150px;
     height: 191px;
+  }
+}
+.team-summary .team-image.old-ratio img {
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .team-summary .team-image.old-ratio img {
+    height: 225px;
   }
 }
 @media (min-width: 768px) {

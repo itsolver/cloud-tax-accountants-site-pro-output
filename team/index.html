@@ -157,7 +157,10 @@
         
         
         <div class="team-image director">
-          <img alt="Zeenet Scarborough logo" class="img-fluid mb-2" src="/assets/images/team/zeenet-scarborough.jpg" />
+          <picture class="team-picture">
+            <source type="image/avif" srcset="/assets/images/team/zeenet-scarborough-q75.avif" class="avif-source">
+            <img alt="Zeenet Scarborough photo" class="img-fluid mb-2 team-img" src="/assets/images/team/zeenet-scarborough.jpg" data-base-path="/assets/images/team/zeenet-scarborough.jpg" />
+          </picture>
         </div>
         
         
@@ -208,7 +211,10 @@
         
         
         <div class="team-image">
-          <img alt="Crystal Wilcox logo" class="img-fluid mb-2" src="/assets/images/team/crystal-wilcox.jpg" />
+          <picture class="team-picture">
+            <source type="image/avif" srcset="/assets/images/team/crystal-wilcox-q75.avif" class="avif-source">
+            <img alt="Crystal Wilcox photo" class="img-fluid mb-2 team-img" src="/assets/images/team/crystal-wilcox.jpg" data-base-path="/assets/images/team/crystal-wilcox.jpg" />
+          </picture>
         </div>
         
         
@@ -238,7 +244,10 @@
         
         
         <div class="team-image">
-          <img alt="Ali Todd logo" class="img-fluid mb-2" src="/assets/images/team/ali-todd.jpg" />
+          <picture class="team-picture">
+            <source type="image/avif" srcset="/assets/images/team/ali-todd-q75.avif" class="avif-source">
+            <img alt="Ali Todd photo" class="img-fluid mb-2 team-img" src="/assets/images/team/ali-todd.jpg" data-base-path="/assets/images/team/ali-todd.jpg" />
+          </picture>
         </div>
         
         
@@ -263,8 +272,78 @@
       </div>
     </div>
     
+    <div class="controls mb-4">
+      <button id="resolutionToggle" class="btn btn-secondary btn-sm">Resolution: 100% (Retina)</button>
+      <button id="qualityToggle" class="btn btn-secondary btn-sm">Quality: 75%</button>
+    </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const resolutionToggle = document.getElementById('resolutionToggle');
+  const qualityToggle = document.getElementById('qualityToggle');
+  
+  let currentResolution = 100; // Start at 100% (Retina 2x)
+  let currentQuality = 75; // Start at 75% quality
+  const resolutions = [100, 120, 140, 160, 180, 200]; // Percentages above retina
+  const qualities = [60, 75, 85]; // Available quality levels
+  let resolutionIndex = 0;
+  let qualityIndex = 1; // Start at 75%
+
+  // Resolution toggle
+  resolutionToggle.addEventListener('click', function() {
+    resolutionIndex = (resolutionIndex + 1) % resolutions.length;
+    currentResolution = resolutions[resolutionIndex];
+    
+    updateImageSources(currentResolution, currentQuality);
+    resolutionToggle.textContent = `Resolution: ${currentResolution}% (${currentResolution === 100 ? 'Retina' : 'Above Retina'})`;
+  });
+
+  // Quality toggle
+  qualityToggle.addEventListener('click', function() {
+    qualityIndex = (qualityIndex + 1) % qualities.length;
+    currentQuality = qualities[qualityIndex];
+    
+    updateImageSources(currentResolution, currentQuality);
+    qualityToggle.textContent = `Quality: ${currentQuality}%`;
+  });
+
+  function updateImageSources(resolution, quality) {
+    const teamPictures = document.querySelectorAll('.team-picture');
+    
+    teamPictures.forEach(function(picture) {
+      const img = picture.querySelector('.team-img');
+      const avifSource = picture.querySelector('.avif-source');
+      
+      // Get the original base path from data attribute
+      const basePath = img.getAttribute('data-base-path');
+      
+      // Extract path and filename
+      const pathParts = basePath.split('/');
+      const filename = pathParts[pathParts.length - 1];
+      const nameWithoutExt = filename.replace('.jpg', '');
+      const directory = pathParts.slice(0, -1).join('/');
+      
+      // Create the new filename with resolution and quality suffixes
+      const resolutionSuffix = resolution === 100 ? '' : `-${resolution}`;
+      const qualitySuffix = `-q${quality}`;
+      
+      const newJpgSrc = `${directory}/${nameWithoutExt}${resolutionSuffix}.jpg`;
+      const newAvifSrc = `${directory}/${nameWithoutExt}${resolutionSuffix}${qualitySuffix}.avif`;
+      
+      // Update both AVIF source and JPEG fallback
+      if (avifSource) avifSource.srcset = newAvifSrc;
+      img.src = newJpgSrc;
+      
+      console.log(`Updated AVIF to: ${newAvifSrc} (fallback: ${newJpgSrc})`);
+    });
+  }
+
+  // Initialize with default values
+  updateImageSources(currentResolution, currentQuality);
+});
+</script>
 
 
 <div class="strip strip-grey">
