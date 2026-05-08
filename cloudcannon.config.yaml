@@ -1,0 +1,27 @@
+file_config:
+  - glob: pages/fbt2026v2.html
+    _enabled_editors:
+      - visual
+      - data
+    _inputs:
+      title:
+        type: text
+        label: Page title
+        options:
+          required: true
+      intro_text:
+        type: markdown
+        label: Intro text
+        comment: Short optional text shown above the form.
+        options:
+          soft_wrap: true
+      cognito_embed_code:
+        type: code
+        label: Cognito embed code
+        comment: Open the Cognito form, choose Publish Form, then copy the Seamless embed code. Use the iframe embed only if Seamless has a compatibility issue.
+        options:
+          syntax: html
+          soft_wrap: true
+          min_visible_lines: 4
+          max_visible_lines: 12
+          required: true
