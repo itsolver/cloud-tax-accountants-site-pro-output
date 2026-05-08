@@ -9,16 +9,10 @@ file_config:
         label: Page title
         options:
           required: true
-      intro_text:
-        type: markdown
-        label: Intro text
-        comment: Short optional text shown above the form.
-        options:
-          soft_wrap: true
       cognito_embed_code:
         type: code
         label: Cognito embed code
-        comment: Open the Cognito form, choose Publish Form, then copy the Seamless embed code. Use the iframe embed only if Seamless has a compatibility issue.
+        comment: Open the Cognito form, choose Publish Form, copy the Seamless embed code, then paste the full code into the box below.
         options:
           syntax: html
           soft_wrap: true
