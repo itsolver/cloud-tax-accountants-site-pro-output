@@ -1,5 +1,5 @@
 file_config:
-  - glob: pages/fbt2026v2.html
+  - glob: pages/fbt2026.html
     _enabled_editors:
       - visual
       - data

@@ -18,7 +18,7 @@ Use Ruby `2.7+` if local installs fail on locked native gems. Avoid committing p
 
 Use the existing style in nearby files. Jekyll pages use YAML front matter followed by Liquid/HTML. Layouts and includes use two-space indentation. Sass uses four-space indentation inside rules; keep selectors scoped to page/layout classes.
 
-Name new public pages with lowercase, hyphen-free or simple hyphenated filenames under `pages/`, and set explicit `permalink` values when URL stability matters, for example `/fbt2026v2/`.
+Name new public pages with lowercase, hyphen-free or simple hyphenated filenames under `pages/`, and set explicit `permalink` values when URL stability matters, for example `/fbt2026/`.
 
 ## Testing Guidelines
 
