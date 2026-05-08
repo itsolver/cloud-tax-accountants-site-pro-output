@@ -16,6 +16,7 @@ file_config:
         options:
           syntax: html
           soft_wrap: true
-          min_visible_lines: 4
+          show_gutter: false
+          min_visible_lines: 6
           max_visible_lines: 12
           required: true
