@@ -10,13 +10,8 @@ file_config:
         options:
           required: true
       cognito_embed_code:
-        type: code
+        type: textarea
         label: Cognito embed code
         comment: Open the Cognito form, choose Publish Form, copy the Seamless embed code, then paste the full code into the box below.
         options:
-          syntax: html
-          soft_wrap: true
-          show_gutter: false
-          min_visible_lines: 6
-          max_visible_lines: 12
           required: true
